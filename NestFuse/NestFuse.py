@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
-#@Project: NestFuse for image fusion
-#@Author: Li Hui, Jiangnan University
-#@Email: hui_li_jnu@163.com
-#@File : test.py
+# @Project: NestFuse for image fusion
+# @Author: Li Hui, Jiangnan University
+# @Email: hui_li_jnu@163.com
+# @File : test.py
 
 import os
 import torch
@@ -15,6 +15,7 @@ from natsort import natsorted
 from tqdm import tqdm
 from PIL import Image
 from time import time
+import argparse
 
 
 def load_model(path, deepsupervision=False):
@@ -83,9 +84,10 @@ def img2RGB(f_name, vi_name):
     f_img = Image.merge('YCbCr', (f_img, vi_Cb, vi_Cr))
     f_RGB = f_img.convert('RGB')
     f_RGB.save(f_name)
-    
-def main(Method='NestFuse', model_path='', ir_dir='', vi_dir='', save_dir='', is_RGB=True):  
-   # run demo
+
+
+def main(Method='NestFuse', model_path='', ir_dir='', vi_dir='', save_dir='', is_RGB=True):
+    # run demo
     deepsupervision = False  # true for deeply supervision
     os.makedirs(save_dir, exist_ok=True)
     with torch.no_grad():
@@ -104,22 +106,30 @@ def main(Method='NestFuse', model_path='', ir_dir='', vi_dir='', save_dir='', is
             run_demo(model, infrared_path, visible_path, save_path, f_type)
             end = time()
             if is_RGB:
-                img2RGB(save_path, visible_path)                
-            test_bar.set_description('{} | {} {:.4f}'.format(Method, item, end-start))    
+                img2RGB(save_path, visible_path)
+            test_bar.set_description('{} | {} {:.4f}'.format(Method, item, end - start))
     torch.cuda.empty_cache()
-                
+
+
 if __name__ == '__main__':
-    ir_path = '/data/timer/Comparison/VIF/Dataset/test_imgs/ir'
-    vi_path = '/data/timer/Comparison/VIF/Dataset/test_imgs/vi'
-    Method = 'NestFuse'
-    save_path = os.path.join('/data/timer/Comparison/VIF/Fusion_Benchmark/Results/', Method)
-    model_path = '/data/timer/Comparison/VIF/Fusion_Benchmark/NestFuse/models/nestfuse_1e2.model'
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--Method', type=str, default='TarDAL', help='Method name')
+    parser.add_argument('--model_path', type=str, default='/data/timer/Comparison/VIF/TarDAL/weights/tardal++.pt',
+                        help='pretrained weights path')
+    parser.add_argument('--ir_dir', type=str, default='/data/timer/Comparison/VIF/Dataset/test_imgs/ir',
+                        help='infrared images dir')
+    parser.add_argument('--vi_dir', type=str, default='/data/timer/Comparison/VIF/Dataset/test_imgs/vi',
+                        help='visible image dir')
+    parser.add_argument('--save_dir', type=str, default='', help='fusion results dir')
+    parser.add_argument('--is_RGB', type=bool, default=True, help='colorize fused images with visible color channels')
+    opts = parser.parse_args()
     main(
-        Method=Method, 
-        model_path=model_path,
-        ir_dir = ir_path,
-        vi_dir = vi_path,
-        save_dir = save_path,
-        is_RGB=True 
+        Method=opts.Method,
+        model_path=opts.model_path,
+        ir_dir=opts.ir_dir,
+        vi_dir=opts.vi_dir,
+        save_dir=opts.save_dir,
+        is_RGB=opts.is_RGB
     )
+
 
