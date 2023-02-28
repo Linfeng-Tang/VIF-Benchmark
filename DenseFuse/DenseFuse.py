@@ -38,7 +38,6 @@ def main(Method = 'SeAFusion', model_path='', ir_dir='', vi_dir='', save_dir='',
     # True for video sequences(frames)
     IS_VIDEO = False
     # True for RGB images
-    is_RGB = False
     
     ssim_weight = 10
     os.makedirs(save_dir, exist_ok=True)
@@ -49,7 +48,7 @@ def main(Method = 'SeAFusion', model_path='', ir_dir='', vi_dir='', save_dir='',
         vi_name = os.path.join(vi_dir, name)
         save_path = os.path.join(save_dir, name)
         fusion_type = 'addition'
-        temp_time = generate(ir_name, vi_name, model_path, model_pre_path, ssim_weight, i+1, IS_VIDEO, is_RGB, type=fusion_type, output_path=save_path, name=name)
+        temp_time = generate(ir_name, vi_name, model_path, model_pre_path, ssim_weight, i+1, IS_VIDEO, IS_RGB=False, type=fusion_type, output_path=save_path, name=name)
         if is_RGB:
             img2RGB(save_path, vi_name)
         test_bar.set_description('{} | {} | {:.4f} s'.format(Method, name, temp_time))
