@@ -114,10 +114,17 @@ publisher={Elsevier}
 
 > 部分融合结果展示如下：
 > ![17.png in the TNO Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/17.png)
-> ![17.png in the TNO Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/00633D.png)
+> 
+> ![21.png in the TNO Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/21.png)
+> 
+> ![175.png in the RoadScene Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/175.png)
+> 
+> ![00633D.png in the MSRS Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/00633D.png)
+> 
+> ![01023N.png in the MSRS Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/01023N.png)
 > 
 
-https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/00633D.png
+
 
 
 ## English Version
@@ -234,6 +241,18 @@ publisher={Elsevier}
 }
 ```
 
+Partial fusion results are shown below:
+
+> ![17.png in the TNO Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/17.png)
+> 
+> ![21.png in the TNO Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/21.png)
+> 
+> ![175.png in the RoadScene Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/175.png)
+> 
+> ![00633D.png in the MSRS Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/00633D.png)
+> 
+> ![01023N.png in the MSRS Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/01023N.png)
+> 
 
 
 
