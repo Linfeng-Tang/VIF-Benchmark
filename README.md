@@ -113,7 +113,8 @@ publisher={Elsevier}
 > 关于原始项目的问题，请根据对应项目的作者，如果有关于这个项目的问题，请联系：**linfeng0419@gmail.com** or **QQ：2458707789**（备注 姓名+学校）。由于项目的issue不会提醒，所以无法及时回复，请见谅。
 
 > 部分融合结果展示如下：
-> https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/17.png
+> ![17.png in the TNO Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/17.png)
+> ![17.png in the TNO Dataset](https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/00633D.png)
 > 
 
 https://github.com/Linfeng-Tang/VIF_Benchmark/blob/main/Demo/00633D.png
