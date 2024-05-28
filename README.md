@@ -9,14 +9,15 @@
   <source
     media="(prefers-color-scheme: light)"
     srcset="
-      https://api.star-history.com/svg?repos=star-history/star-history&type=Date
+      https://api.star-history.com/svg?repos=https://github.com/Linfeng-Tang/VIF-Benchmark
     "
   />
   <img
     alt="Star History Chart"
-    src="https://api.star-history.com/svg?repos=star-history/star-history&type=Date"
+    src="https://api.star-history.com/svg?repos=https://github.com/Linfeng-Tang/VIF-Benchmark"
   />
 </picture>
+
 ## 中文版
 > 我们把所有主流的基于深度学习的红外和可见光图像融合方法都集成在了这个框架中。
 > 
