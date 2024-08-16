@@ -39,6 +39,14 @@
 
 > 整理不易，欢迎**Star**我们的项目，并引用我们以下的文献，你的支持是我们持续更新的动力。
 
+```
+@inproceedings{Tang2024DRMF,
+    title={DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior},
+    author={Tang, Linfeng and Deng, Yuxin and Yi, Xunpeng and Yan, Qinglong and Yuan, Yixuan and Ma, Jiayi},
+    booktitle=Proceedings of the ACM International Conference on Multimedia,
+    year={2024}
+}
+```
 
 ```
 @article{TangSeAFusion,
