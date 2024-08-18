@@ -1,6 +1,7 @@
 # VIF_Benchmark
+#### ✨News:
+[2024-07-16] 我们的论文《[DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior]([https://www.sciencedirect.com/science/article/pii/S1566253523001860](https://openreview.net/forum?id=BwXrlBweab))》被《ACM MM 2024》正式接收！[[论文下载](https://openreview.net/pdf?id=BwXrlBweab)] [[Code](https://github.com/Linfeng-Tang/DRMF)]
 ## Star History
-
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
